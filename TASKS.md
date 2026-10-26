@@ -33,3 +33,12 @@
 - [x] Ejecutar `flutter analyze` asegurando **0 errores y 0 advertencias** (`No issues found!`).
 - [x] Compilar APK de producción (`flutter build apk --release`) y copiar a `./Gymini.apk`.
 - [x] Inicializar repositorio Git, realizar commit y publicar en GitHub mediante `gh repo create Gymini --public --source=. --remote=origin --push`.
+
+## Fase 5: Auditoría y Actualización de Dependencias (`@qa_reviewer`)
+- [x] Detección automática del ecosistema: Flutter / Dart (SDK Flutter 3.16.9 / Dart 3.2.6).
+- [x] Aislamiento estricto y prevención de fugas en `.gitignore` (`.env`, `node_modules/`, `venv/`, `dist/`, etc.).
+- [x] Ejecutar `flutter pub outdated` e inspeccionar dependencias compatibles y restricciones.
+- [x] Aplicar actualización segura compatible (`intl` ^0.18.1 -> ^0.19.0, `posix` 6.5.2 -> 6.5.3).
+- [x] Mantener bloqueos intencionales para prevenir breaking changes (`uuid` 3.x, `cupertino_icons` 1.x, `path_provider_android` 2.2.0 por compatibilidad Gradle/AGP).
+- [x] Validar calidad con `flutter analyze` (0 errores, 0 warnings) y `flutter test` (3/3 pruebas superadas).
+- [x] Commit semántico y push a GitHub (`main`).
